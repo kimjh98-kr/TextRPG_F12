@@ -22,17 +22,17 @@ Character* Character::getInstance(string userName, Job* characterJob) {
 
 void Character::displayStatus()
 {
-    cout << "ÇöÀç À¯ÀúÀÇ Á¤º¸" << endl;
-    cout << "·¹º§: " << level << endl;
-    cout << "Ã¼·Â: " << helth << "/" << maxHelth << endl;
-    cout << "¸¶³ª: " << mp << "/" << maxMp << endl;
-    cout << "°æÇèÄ¡: " << experience << endl;
-    cout << "°ø°Ý·Â: " << attack << endl;
-    cout << "º¸À¯°ñµå: " << gold << endl;
-	cout << "°ø°Ý¼Óµµ: " << attackspeed << endl;
-	cout << "¸íÁß·ü: " << accuracy << endl;
-	cout << "È¸ÇÇÀ²: " << evasion << endl;
-    cout << "Á÷¾÷: " << job->getJobName() << endl;
+    cout << "í˜„ìž¬ ìœ ì €ì˜ ì •ë³´" << endl;
+    cout << "ë ˆë²¨: " << level << endl;
+    cout << "ì²´ë ¥: " << helth << "/" << maxHelth << endl;
+    cout << "ë§ˆë‚˜: " << mp << "/" << maxMp << endl;
+    cout << "ê²½í—˜ì¹˜: " << experience << endl;
+    cout << "ê³µê²©ë ¥: " << attack << endl;
+    cout << "ë³´ìœ ê³¨ë“œ: " << gold << endl;
+	cout << "ê³µê²©ì†ë„: " << attackspeed << endl;
+	cout << "ëª…ì¤‘ë¥ : " << accuracy << endl;
+	cout << "íšŒí”¼ìœ¨: " << evasion << endl;
+    cout << "ì§ì—…: " << job->getJobName() << endl;
 }
 
 void Character::levelUp()
@@ -41,7 +41,7 @@ void Character::levelUp()
     maxHelth += level * 20;
     helth = maxHelth;
     attack += level * 5;
-    cout << "·¹º§¾÷!" << name << "ÀÇ ·¹º§ÀÌ " << level << "ÀÌ µÇ¾ú½À´Ï´Ù!" << endl;
+    cout << "ë ˆë²¨ì—…!" << name << "ì˜ ë ˆë²¨ì´ " << level << "ì´ ë˜ì—ˆìŠµë‹ˆë‹¤!" << endl;
 }
 
 
