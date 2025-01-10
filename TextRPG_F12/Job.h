@@ -8,16 +8,16 @@
 
 using namespace std;
 
-// Á÷¾÷ ÀÎÅÍÆäÀÌ½º
+// ì§ì—… ì¸í„°í˜ì´ìŠ¤
 class Job {
 public:
     virtual string getJobName() const = 0;
     virtual ~Job() {}
     virtual void applyJobEffect(double& attack, int& maxHelth, int& attackspeed, double& evasion, double& accuracy, int& maxMp) const = 0;
-    virtual Skill* getSkill() const = 0; // ½ºÅ³ ¹İÈ¯
+    virtual Skill* getSkill() const = 0; // ìŠ¤í‚¬ ë°˜í™˜
 };
 
-// Àü»ç Á÷¾÷ Å¬·¡½º
+// ì „ì‚¬ ì§ì—… í´ë˜ìŠ¤
 class Warrior : public Job {
 private:
 	Skill* skill = new WarriorSkill();
@@ -37,7 +37,7 @@ public:
     }
 };
 
-// ¸¶¹ı»ç Á÷¾÷ Å¬·¡½º
+// ë§ˆë²•ì‚¬ ì§ì—… í´ë˜ìŠ¤
 class Mage : public Job {
 private:
 	Skill* skill = new MageSkill();
@@ -58,7 +58,7 @@ public:
     }
 };
 
-// ±Ã¼ö Á÷¾÷ Å¬·¡½º
+// ê¶ìˆ˜ ì§ì—… í´ë˜ìŠ¤
 class Archer : public Job {
 private:
 	Skill* skill = new ArcherSkill();

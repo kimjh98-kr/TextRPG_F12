@@ -7,11 +7,11 @@
 
 using namespace std;
 
-// ½ºÅ³ ÀÎÅÍÆäÀÌ½º
+// ìŠ¤í‚¬ ì¸í„°í˜ì´ìŠ¤
 class Skill {
 public:
-    virtual void useSkill() const = 0; // ½ºÅ³ »ç¿ë
-    virtual string getSkillName() const = 0; // ½ºÅ³ ÀÌ¸§
+    virtual void useSkill() const = 0; // ìŠ¤í‚¬ ì‚¬ìš©
+    virtual string getSkillName() const = 0; // ìŠ¤í‚¬ ì´ë¦„
     virtual ~Skill() {}
 };
 
@@ -19,32 +19,32 @@ public:
 class WarriorSkill : public Skill {
 public:
     void useSkill() const override {
-        cout << "Àü»çÀÇ °­Å¸¸¦ »ç¿ëÇÕ´Ï´Ù!" << endl;
+        cout << "ì „ì‚¬ì˜ ê°•íƒ€ë¥¼ ì‚¬ìš©í•©ë‹ˆë‹¤!" << endl;
     }
 
     string getSkillName() const override {
-        return "Àü»çÀÇ °­Å¸";
+        return "ì „ì‚¬ì˜ ê°•íƒ€";
     }
 };
 
 class MageSkill : public Skill {
 public:
     void useSkill() const override {
-        cout << "¸¶¹ı»çÀÇ È­¿°±¸¸¦ »ç¿ëÇÕ´Ï´Ù!" << endl;
+        cout << "ë§ˆë²•ì‚¬ì˜ í™”ì—¼êµ¬ë¥¼ ì‚¬ìš©í•©ë‹ˆë‹¤!" << endl;
     }
 
     string getSkillName() const override {
-        return "¸¶¹ı»çÀÇ È­¿°±¸";
+        return "ë§ˆë²•ì‚¬ì˜ í™”ì—¼êµ¬";
     }
 };
 
 class ArcherSkill : public Skill { 
 public:
 	void useSkill() const override {
-        cout << "±Ã¼öÀÇ ¿¬¼Ó »ç°İÀ» »ç¿ëÇÕ´Ï´Ù!" << endl;
+        cout << "ê¶ìˆ˜ì˜ ì—°ì† ì‚¬ê²©ì„ ì‚¬ìš©í•©ë‹ˆë‹¤!" << endl;
 	}
 	string getSkillName() const override {
-		return "±Ã¼öÀÇ ¿¬¼Ó »ç°İ";
+		return "ê¶ìˆ˜ì˜ ì—°ì† ì‚¬ê²©";
 	}
 };
 
